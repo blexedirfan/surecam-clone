@@ -1,0 +1,255 @@
+.logo-slider-wrap {
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+    padding: 24px 0;
+}
+
+.logo-slider {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    animation: slide-logos 25s linear infinite;
+    width: calc(120px * 6);
+}
+
+.logo-slider img {
+    width: 120px;
+    max-width: 30vw;
+    object-fit: contain;
+    filter: grayscale(0.2);
+    transition: filter 0.2s;
+}
+
+.logo-slider img:hover {
+    filter: grayscale(0);
+}
+
+@keyframes slide-logos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.fixed-left {
+    position: sticky;
+    top: 0;
+    height: 60vh;
+    overflow: auto;
+}
+
+.scrollable {
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.card {
+    margin-bottom: 20px;
+    border-radius: 30px;
+    border: none;
+}
+
+.scrollable::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable {
+    scrollbar-width: none;
+}
+
+.testimonial-card {
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+    background-image: -moz-repeating-linear-gradient(45deg, #f8f9fa, #f8f9fa 10px, #e9ecef 10px, #e9ecef 20px);
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffc107;
+    margin-bottom: 15px;
+}
+
+.btn {
+    border-radius: 100px;
+    font-family: GeneralSans, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .1em;
+    line-height: 18px;
+    padding: 14px 32px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+}
+
+.learn-btn {
+    background: none;
+    color: black;
+    border: 1px solid black;
+    transition: all 0.2s ease-in-out;
+}
+
+.learn-btn:hover {
+    background: black;
+    color: white;
+    border: 1px solid black;
+}
+
+.demo-btn {
+    background-color: #35adee;
+    color: white;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.demo-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.pricing-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.pricing-btn:hover {
+    border: 1px solid black;
+    color: black;
+}
+
+.button-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.custom-btn {
+    background-color: #35ADEE;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.custom-btn:hover {
+    background-color: #2a9dcf;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .logo-slider {
+        gap: 24px !important; /* Reduce gap on medium screens */
+    }
+
+    .logo-slider img {
+        width: 100px !important; /* Smaller logo size */
+    }
+
+    .fixed-left {
+        height: 50vh !important; /* Adjust height */
+    }
+
+    .scrollable {
+        height: 70vh !important; /* Adjust height */
+    }
+}
+
+@media (max-width: 992px) {
+    .logo-slider {
+        gap: 16px !important; /* Further reduce gap */
+    }
+
+    .logo-slider img {
+        width: 80px !important; /* Even smaller logo size */
+    }
+
+    .fixed-left {
+        height: 40vh !important; /* Adjust height */
+    }
+
+    .scrollable {
+        height: 60vh !important; /* Adjust height */
+    }
+
+    .btn {
+        font-size: 12px; /* Smaller button text */
+        padding: 10px 20px; /* Smaller padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-slider {
+        align-items: center; /* Center logos */
+    }
+
+    .logo-slider img {
+        width: 60px; /* Smaller logo size */
+    }
+
+    .fixed-left {
+        height: auto; /* Allow height to adjust */
+    }
+
+    .scrollable {
+        height: auto; /* Allow height to adjust */
+    }
+
+    .custom-btn {
+        width: 35px; /* Smaller button size */
+        height: 35px; /* Smaller button size */
+        font-size: 18px; /* Smaller font size */
+    }
+}
+
+@media (max-width: 576px) {
+    .btn {
+        font-size: 10px; /* Even smaller button text */
+        padding: 8px 16px; /* Smaller padding */
+    }
+
+    .testimonial-card {
+        padding: 15px; /* Smaller padding */
+    }
+
+    .testimonial-card img {
+        width: 60px; /* Smaller image size */
+        height: 60px; /* Smaller image size */
+    }
+    .map{
+        width: 100% !important;
+        height: auto;
+    }
+}
+
+.map {
+    width: 150%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

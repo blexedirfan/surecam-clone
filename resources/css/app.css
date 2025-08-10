@@ -1,0 +1,207 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    height: 70px;
+}
+
+.logo-container {
+    flex: 0 0 20%;
+}
+
+.links-container {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 100px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: 200px;
+    background: #35adee;
+    border-radius: 100px;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    position: relative;
+}
+
+.navbar-menu li a {
+    all: unset;
+    align-items: center;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-family: GeneralSans, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    gap: 10px;
+    justify-content: center;
+    letter-spacing: .01em;
+    padding: 10px 16px;
+}
+
+.navbar-menu li a:hover {
+    color: #0072ce;
+}
+
+.navbar-cta {
+    background: #0072ce;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.navbar-cta:hover {
+    background: #005fa3;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 180px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    z-index: 100;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 10px 20px;
+    color: #222;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background: #f5f7fa;
+    color: #0072ce;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    font-family: GeneralSans, Arial, Helvetica, sans-serif;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo-container {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .navbar-menu li a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar-cta {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .navbar-brand img {
+        width: 150px;
+    }
+
+    .navbar-menu li a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .navbar-cta {
+        padding: 8px 16px;
+    }
+}
+
+.navbar-toggler {
+    display: none; /* Hide by default */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .navbar-menu.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .navbar-toggler {
+        display: block; /* Show toggle button on mobile */
+    }
+
+    .links-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        border-radius: 5px; /* Adjust border radius */
+      
+    }
+    .body{
+
+        overflow: hidden;
+    }
+
+}
+
