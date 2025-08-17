@@ -1,0 +1,24 @@
+
+.service-item:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .service-item {
+        margin-bottom: 30px;
+    }
+}

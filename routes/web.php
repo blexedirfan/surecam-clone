@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +14,16 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::view('/', 'pages.home');
-Route::view('/products', 'pages.products');
-Route::view('/solutions', 'pages.solutions');
-Route::view('/resources', 'pages.resources');
-Route::view('/contact', 'pages.contact');
 
 
 
-// Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::view('/home', 'pages.home')->name('home');
+Route::view('/about', 'pages.about')->name('about');
+Route::view('/products', 'pages.products')->name('products');
+Route::view('/services', 'pages.services')->name('services');
+Route::view('/contact', 'pages.contact')->name('contact');
+Route::view('/pricing', 'pages.pricing')->name('pricing');
+
+
+Route::post('/contact-submit', [ContactController::class, 'submit'])->name('contact.submit');
+

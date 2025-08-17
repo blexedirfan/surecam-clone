@@ -29,6 +29,7 @@
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-100%);
     }
@@ -37,12 +38,13 @@
 .fixed-left {
     position: sticky;
     top: 0;
-    height: 60vh;
+    height: 80vh;
     overflow: auto;
+    text-align: left
 }
 
 .scrollable {
-    height: 80vh;
+    height: 100vh;
     overflow-y: scroll;
 }
 
@@ -164,92 +166,231 @@
 /* Responsive Styles */
 @media (max-width: 1200px) {
     .logo-slider {
-        gap: 24px !important; /* Reduce gap on medium screens */
+        gap: 24px !important;
+        /* Reduce gap on medium screens */
     }
 
     .logo-slider img {
-        width: 100px !important; /* Smaller logo size */
+        width: 100px !important;
+        /* Smaller logo size */
     }
 
     .fixed-left {
-        height: 50vh !important; /* Adjust height */
+        height: 50vh !important;
+        /* Adjust height */
     }
 
     .scrollable {
-        height: 70vh !important; /* Adjust height */
+        height: 70vh !important;
+        /* Adjust height */
     }
 }
 
 @media (max-width: 992px) {
     .logo-slider {
-        gap: 16px !important; /* Further reduce gap */
+        gap: 16px !important;
+        /* Further reduce gap */
     }
 
     .logo-slider img {
-        width: 80px !important; /* Even smaller logo size */
+        width: 80px !important;
+        /* Even smaller logo size */
     }
 
     .fixed-left {
-        height: 40vh !important; /* Adjust height */
+        height: 40vh !important;
+        /* Adjust height */
     }
 
     .scrollable {
-        height: 60vh !important; /* Adjust height */
+        height: 60vh !important;
+        /* Adjust height */
     }
 
     .btn {
-        font-size: 12px; /* Smaller button text */
-        padding: 10px 20px; /* Smaller padding */
+        font-size: 12px;
+        /* Smaller button text */
+        padding: 10px 20px;
+        /* Smaller padding */
     }
 }
 
 @media (max-width: 768px) {
     .logo-slider {
-        align-items: center; /* Center logos */
+        align-items: center;
+        /* Center logos */
     }
 
     .logo-slider img {
-        width: 60px; /* Smaller logo size */
+        width: 60px;
+        /* Smaller logo size */
     }
 
     .fixed-left {
-        height: auto; /* Allow height to adjust */
+        height: auto;
+        /* Allow height to adjust */
     }
 
     .scrollable {
-        height: auto; /* Allow height to adjust */
+        height: auto;
+        /* Allow height to adjust */
     }
 
     .custom-btn {
-        width: 35px; /* Smaller button size */
-        height: 35px; /* Smaller button size */
-        font-size: 18px; /* Smaller font size */
+        width: 35px;
+        /* Smaller button size */
+        height: 35px;
+        /* Smaller button size */
+        font-size: 18px;
+        /* Smaller font size */
     }
 }
 
 @media (max-width: 576px) {
     .btn {
-        font-size: 10px; /* Even smaller button text */
-        padding: 8px 16px; /* Smaller padding */
+        font-size: 10px;
+        /* Even smaller button text */
+        padding: 8px 16px;
+        /* Smaller padding */
     }
 
     .testimonial-card {
-        padding: 15px; /* Smaller padding */
+        padding: 15px;
+        /* Smaller padding */
     }
 
     .testimonial-card img {
-        width: 60px; /* Smaller image size */
-        height: 60px; /* Smaller image size */
+        width: 60px;
+        /* Smaller image size */
+        height: 60px;
+        /* Smaller image size */
     }
-    .map{
+
+    .map {
         width: 100% !important;
         height: auto;
     }
 }
 
 .map {
-    width: 150%;
-    height: auto;
+    max-width: 100%;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.map:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.text-primary {
+    color: #35adee !important;
+}
+
+.text-secondary {
+    color: gray;
+}
+
+.btn-primary {
+    background-color: #35adee !important;
+    color: white !important;
+    border: none !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.btn-primary:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+.cam-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cam-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cam-video {
+    transition: transform 0.3s ease;
+}
+
+.cam-video:hover {
+    transform: scale(1.02);
+}
+
+.pricing-card {
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.featured {
+    border: 2px solid #35adee;
+    transform: scale(1.05);
+}
+
+.blog-card {
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.btn-outline-primary {
+    border-color: #35adee;
+    color: #35adee;
+}
+
+.btn-outline-primary:hover {
+    background-color: #35adee;
+    color: white;
+}
+
+.demo-last-btn {
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.demo-last-btn:hover {
+    background-color: #fff !important;
+    color: #2a9dcf !important;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card {
+    background: #f9fafc;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.bg-primary {
+    background-color: #35adee !important;
+    color: white !important;
+}
+
+

@@ -1,0 +1,33 @@
+/* Hero Section */
+.contact-hero {
+    background: linear-gradient(rgba(53,173,238,0.8), rgba(0,0,0,0.6)), url('/assets/images/contact-bg.jpg') center/cover no-repeat;
+    height: 50vh;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/* Breadcrumb */
+.breadcrumb a {
+    text-decoration: none;
+    font-weight: 500;
+}
+.breadcrumb .active {
+    font-weight: bold;
+}
+
+/* Inputs */
+form input, form textarea {
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+form input:focus, form textarea:focus {
+    border-color: #35adee;
+    box-shadow: 0 0 8px rgba(53,173,238,0.3);
+}
+
+/* Button Hover */
+.demo-btn:hover {
+    background: #2c97c8;
+    transform: translateY(-2px);
+    transition: 0.3s ease;
+}
